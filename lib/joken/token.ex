@@ -5,14 +5,14 @@ defmodule Joken.Token do
   This is the data structure that holds the token state.
   """
 
-  @type json_module        :: module
-  @type header             :: %{binary => any}
-  @type claims             :: %{binary => any}
-  @type claim_function_map :: %{binary => function}
-  @type error              :: binary
-  @type errors             :: [binary]
-  @type token              :: binary
-  @type signer             :: Signer.t
+  @type json_module        :: module | nil
+  @type header             :: %{optional(binary) => any}
+  @type claims             :: %{optional(binary) => any, optional(atom) => any}
+  @type claim_function_map :: %{optional(binary) => function}
+  @type error              :: binary | nil
+  @type errors             :: [binary] | nil
+  @type token              :: binary | nil
+  @type signer             :: Signer.t | nil
 
   @type t :: %__MODULE__{
     json_module: module,
