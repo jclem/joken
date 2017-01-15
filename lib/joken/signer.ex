@@ -18,7 +18,7 @@ defmodule Joken.Signer do
   'allow_none_algorithm' key on the 'joken' app configuration to true
   """
 
-  @type jwk :: %{}
+  @type jwk :: %{} | binary
   @type jws :: %{}
 
   @type t :: %__MODULE__{
